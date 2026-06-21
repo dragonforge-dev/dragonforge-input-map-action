@@ -6,7 +6,7 @@
 # Dragonforge Input Map Action <img src="/addons/dragonforge_input_map_action/assets/textures/icons/input_map_action.svg" width="32" alt="Input Map Action Icon"/>
 Helper class to create and add actions when a plugin is activated, and likewise remove actions when the plugin is deactivated.
 
-# Version 1.0
+# Version 1.0.1
 For use with **Godot 4.7.stable** and later.
 
 # Installation Instructions

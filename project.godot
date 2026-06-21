@@ -10,9 +10,9 @@ config_version=5
 
 [application]
 
-config/name="Dragonforge Input Map Action v1.0"
+config/name="Dragonforge Input Map Action v1.0.1"
 config/description="Helper class to create and add actions when a plugin is activated, and likewise remove actions when the plugin is deactivated."
-config/version="1.0"
+config/version="1.0.1"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="uid://m35w8ws377d3"
 

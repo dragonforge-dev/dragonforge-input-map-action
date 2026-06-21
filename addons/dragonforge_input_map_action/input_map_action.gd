@@ -1,7 +1,7 @@
 @icon("uid://m35w8ws377d3")
 ## Helper class to create and add actions when a plugin is activated, and
 ## likewise remove actions when the plugin is deactivated.
-## [br] [br]
+## 
 ## Plugin Example Code:
 ## [codeblock]
 ## @tool

@@ -17,23 +17,23 @@
 ##
 ##
 ## func _enable_plugin() -> void:
-##	Action.add(MOVE_UP, Action.joy_axis(JOY_AXIS_LEFT_Y, Action.AXIS_UP), Action.key(KEY_UP), Action.key(KEY_W))
-##	Action.add(MOVE_DOWN, Action.joy_axis(JOY_AXIS_LEFT_Y, Action.AXIS_DOWN), Action.key(KEY_DOWN), Action.key(KEY_S))
-##	Action.add(MOVE_LEFT, Action.joy_axis(JOY_AXIS_LEFT_X, Action.AXIS_LEFT), Action.key(KEY_LEFT), Action.key(KEY_A))
-##	Action.add(MOVE_RIGHT, Action.joy_axis(JOY_AXIS_LEFT_X, Action.AXIS_RIGHT), Action.key(KEY_RIGHT), Action.key(KEY_D))
-##	Action.add(JUMP, Action.joy_button(JOY_BUTTON_A), Action.mouse_button(MOUSE_BUTTON_RIGHT), Action.key(KEY_SPACE))
-##	Action.add(FIRE, Action.joy_axis(JOY_AXIS_TRIGGER_RIGHT), Action.mouse_button(MOUSE_BUTTON_LEFT), Action.key(KEY_CTRL))
+##	InputMapAction.add(MOVE_UP, InputMapAction.joy_axis(JOY_AXIS_LEFT_Y, InputMapAction.AXIS_UP), InputMapAction.key(KEY_UP), InputMapAction.key(KEY_W))
+##	InputMapAction.add(MOVE_DOWN, InputMapAction.joy_axis(JOY_AXIS_LEFT_Y, InputMapAction.AXIS_DOWN), InputMapAction.key(KEY_DOWN), InputMapAction.key(KEY_S))
+##	InputMapAction.add(MOVE_LEFT, InputMapAction.joy_axis(JOY_AXIS_LEFT_X, InputMapAction.AXIS_LEFT), InputMapAction.key(KEY_LEFT), InputMapAction.key(KEY_A))
+##	InputMapAction.add(MOVE_RIGHT, InputMapAction.joy_axis(JOY_AXIS_LEFT_X, InputMapAction.AXIS_RIGHT), InputMapAction.key(KEY_RIGHT), InputMapAction.key(KEY_D))
+##	InputMapAction.add(JUMP, InputMapAction.joy_button(JOY_BUTTON_A), InputMapAction.mouse_button(MOUSE_BUTTON_RIGHT), InputMapAction.key(KEY_SPACE))
+##	InputMapAction.add(FIRE, InputMapAction.joy_axis(JOY_AXIS_TRIGGER_RIGHT), InputMapAction.mouse_button(MOUSE_BUTTON_LEFT), InputMapAction.key(KEY_CTRL))
 ##	print_rich("[color=yellow][b]WARNING[/b][/color]: Project must be reloaded for InputMap changes to appear. [color=ivory][b]Project -> Reload Current Project[/b][/color]")
 ##	EditorInterface.restart_editor()
 ##
 ##
 ## func _disable_plugin() -> void:
-##	Action.remove(MOVE_UP)
-##	Action.remove(MOVE_DOWN)
-##	Action.remove(MOVE_LEFT)
-##	Action.remove(MOVE_RIGHT)
-##	Action.remove(JUMP)
-##	Action.remove(FIRE)
+##	InputMapAction.remove(MOVE_UP)
+##	InputMapAction.remove(MOVE_DOWN)
+##	InputMapAction.remove(MOVE_LEFT)
+##	InputMapAction.remove(MOVE_RIGHT)
+##	InputMapAction.remove(JUMP)
+##	InputMapAction.remove(FIRE)
 ##	print_rich("[color=yellow][b]WARNING[/b][/color]: Project must be reloaded for InputMap changes to appear. [color=ivory][b]Project -> Reload Current Project[/b][/color]")
 ##	EditorInterface.restart_editor()
 ## [/codeblock]
@@ -101,7 +101,7 @@ static func mouse_button(input: MouseButton, device: int = -1) -> InputEventMous
 ## [codeblock]
 ## const MOVE_UP = "move_up"
 ##
-## Action.add(MOVE_UP, Action.joy_axis(JOY_AXIS_LEFT_Y, Action.AXIS_UP), Action.key(KEY_UP), Action.key(KEY_W))
+## InputMapAction.add(MOVE_UP, InputMapAction.joy_axis(JOY_AXIS_LEFT_Y, InputMapAction.AXIS_UP), InputMapAction.key(KEY_UP), InputMapAction.key(KEY_W))
 ## [/codeblock]
 static func add(action: StringName, ...events: Array) -> void:
 	var input_map = {
@@ -128,7 +128,7 @@ static func add(action: StringName, ...events: Array) -> void:
 ## [codeblock]
 ## const MOVE_UP = "move_up"
 ##
-## Action.remove(MOVE_UP)
+## InputMapAction.remove(MOVE_UP)
 ## [/codeblock]
 static func remove(action: StringName) -> void:
 	InputMap.erase_action(action)
